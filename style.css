@@ -15,27 +15,27 @@ section {
     margin: 0px;
 }
 #home{
-    background-color: lavender;
+    background-color: linear gradient(#0f172a,#1e3a8a,#3b82f6);
+    ;
 
 }
-#home p{ 
-    font-size: 40px;
-    font-family: cursive;
-    color: chocolate;
-}
+
 #about{
     font-size: 30px;
-    background-color: lavender;
+    background-color: linear gradient(#0f172a,#1e3a8a,#3b82f6);
+
     color: black;
 }
 #project{font-size: 30px;
-    background-color: lavender;
+    background-color: linear gradient(#0f172a,#1e3a8a,#3b82f6);
+
     color: black;
 
 }
 #contact{
     font-size: 30px;
-    background-color: lavender;
+    background-color: linear gradient(#0f172a,#1e3a8a,#3b82f6);
+
     color: black;
 }
 .welcome{
@@ -48,27 +48,22 @@ section {
 
 }
 .p1{
-    border-radius: 20px;
-    object-fit: cover;
+    border-radius: 50%;
+    object-fit: contain;
     width: 450px;
     height: 450px;
-    object-position: center;
+    object-position: center 45%;
     background-color: lavender;
     margin: 20px;
-    box-shadow: lavender;
-    padding: 20px;
+    box-shadow: 0 8px 25px rgba(90, 60, 50, 0.18);
+    padding: 8px;
 }
 nav a:hover{
     color: brown;
     text-decoration: none;
-    box-shadow:1px 4px blue;
-
-
+    box-shadow:1px 4px 
 }
-body{
-    padding: 0px;
-    margin: 0px;
-}
+
 .pro{ font-size: 20px;
     color: black;
     text-decoration: none;
@@ -96,4 +91,58 @@ body{
     margin-right: 20px;
     transform: translateY(-3);
     
+}
+
+
+.ename{
+    width: 300px;
+    height: 40px;
+    font-size: 40px;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.getToKnowMe:hover{
+    box-shadow: 3px 8px rgb(24, 21, 21);
+    border-radius: 8px;
+}
+body{
+    margin: 0px;
+    background: linear-gradient(135deg, #f5f3ff, #ddd6fe, #ccfbf1);
+}
+.first{
+    font-size: 40px;
+    font-family: fantasy;
+    color: chocolate;
+    position: relative;
+    top: =40px;
+}
+
+
+.getToKnowMe{
+    width: 500px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    border-width: 5px;
+    background-color: burlywood;
+}
+.intro{
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 25px 30px;
+
+    line-height: 1.7;
+    font-size: 30px;
+    text-align: center;
+
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(120, 90, 150, 0.12);
+
 }
