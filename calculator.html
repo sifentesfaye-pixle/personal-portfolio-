@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<bu>, initial-scale=1.0">
+        <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+
+</head>
+<body>
+    <div class="grid-container">
+    <input id="display">
+    <button onclick="addNumber('1')">1</button>  <button onclick="addNumber('2')">2</button>
+    <button onclick="addNumber('3')">3</button>   <button onclick="addNumber('4')">4</button>
+    <button onclick="addNumber('5')">5</button>   <button onclick="addNumber('6')">6</button>
+    <button onclick="addNumber('7')">7</button>   <button onclick="addNumber('8')">8</button>
+    <button onclick="addNumber('9')">9</button>
+    <button onclick="addNumber('0')">0</button>
+    <button class="but" onclick="addNumber('+')">+</button>
+    <button class="but" onclick="addNumber('-')">-</button>
+    <button class="but" onclick="addNumber('*')">*</button>
+    <button class="but" onclick="addNumber('/')">/</button>
+    <button class="but" onclick="addNumber('.')">.</button>
+    <button class="but" onclick="addNumber('%')">%</button>
+    <button class="but" onclick="calculate()">=</button>
+  <button  class="but" onclick="addNumber('±')">±</button>
+    <button class="cut"onclick="clearCalculation()">c</button>
+    <button class="cut" onclick="backspace()">DEL</button>
+    </div>
+<script>
+
+
+        let calculation = '';
+        function addNumber(number) {
+    calculation += number;
+    display.value =calculation;
+    display.focus;
+        }
+        function calculate() {
+            let result = eval(calculation);
+    display.value = calculation + '=' + result;
+     calculation = result;
+     display.focus;
+
+}
+
+    function clearCalculation() {
+    calculation = '';
+    display.value = calculation;
+    display.focus;
+}
+function backspace() {
+    calculation = calculation.slice(0, -1);
+    display.value = calculation;
+    display.focus;
+}   
+function moveCursor() {
+    display.focus();
+    display.setSelectionRange(display.value.length, display.value.length);
+}
+
+let display = document.getElementById('display');
+   display.focus;
+
+document.addEventListener("keydown", function(event){
+
+if (event.key >= "0" && event.key <= "9") {
+    addNumber(event.key);
+}
+
+if (event.key === "+") {
+    addNumber("+");
+}
+
+if (event.key === "-") {
+    addNumber("-");
+}
+
+if (event.key === "*") {
+    addNumber("*");
+}
+
+if (event.key === "/") {
+    addNumber("/");
+}
+
+if (event.key === "Enter") {
+    calculate();
+}
+
+if (event.key === "Backspace") {
+    backspace();
+}
+
+if (event.key === "Escape") {
+    clearCalculation();
+}
+
+});
+  
+    </script>
+</body>
+</html>
